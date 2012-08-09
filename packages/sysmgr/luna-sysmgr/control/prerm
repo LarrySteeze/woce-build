@@ -33,4 +33,7 @@ else
 	echo "we didn't find a passcode"
 fi
 
+echo "removing app dir"
+rm -rf ${APPDIR}
+
 exit 0
