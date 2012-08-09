@@ -80,6 +80,8 @@ build/$(CONFIG)/%.built-${VERSION}: build/$(CONFIG)/%-stage/.built-${VERSION} ${
 	tar -C build/$(CONFIG)/$*/usr/palm/applications/${APP_ID}/ -xf -
 	tar -cf - LunaSysMgr_eventd | \
 	tar -C build/$(CONFIG)/$*/usr/palm/applications/${APP_ID}/ -xf -
+	tar -cf - files/*.json | \
+	tar -C build/$(CONFIG)/$*/usr/palm/applications/${APP_ID}/ -xf -
 	mkdir -p build/$(CONFIG)/$*/usr/palm/applications/${APP_ID}/bin
 	tar -C build/$(CONFIG)/$*-stage/release-topaz/ -cf - LunaSysMgr | \
 	tar -C build/$(CONFIG)/$*/usr/palm/applications/${APP_ID}/bin/ -xf -
