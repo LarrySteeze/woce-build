@@ -17,8 +17,9 @@ CHANGELOG = \
 0.0.1: Initial testing release.
 
 APPINFO_CHANGELOG = [ \
-{ "version" : "0.0.2",  "log" : [ "First Patched Release" ] } \
+{ "version" : "0.0.2",  "log" : [ "First Patched Release" ] }, \
 { "version" : "0.0.1",  "log" : [ "Initial testing release" ] } \
+]
 
 LICENSE  = Apache 2.0 License
 HEADLESSAPP_VERSION = 0.2.0
