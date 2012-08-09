@@ -1,5 +1,5 @@
 #!/bin/sh
-PID=org.webos-community-edition.lunasysmgr-ce
+PID=org.webosports.lunasysmgrce
 
 # Handle execution as pmPostInstall.script
 if [ -z "$IPKG_OFFLINE_ROOT" ]; then
