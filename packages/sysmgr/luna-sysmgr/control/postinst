@@ -29,4 +29,9 @@ fi
 # Install new LSM for the replacer to find
 cp ${APPDIR}/bin/LunaSysMgr /usr/bin/LunaSysMgr.new
 
+TWEAKSDIR=/media/cryptofs/apps/usr/palm/services/org.webosinternals.tweaks.prefs/preferences/
+
+# Install Tweaks .json files
+cp ${APPDIR}/files/*.json ${TWEAKSDIR}
+
 exit 0
