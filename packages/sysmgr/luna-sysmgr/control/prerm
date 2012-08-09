@@ -33,4 +33,6 @@ else
 	echo "we didn't find a passcode"
 fi
 
+reboot
+
 exit 0
