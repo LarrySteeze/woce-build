@@ -39,6 +39,4 @@ TWEAKSDIR=/media/cryptofs/apps/usr/palm/services/org.webosinternals.tweaks.prefs
 cd ${TWEAKSDIR}
 rm `ls /media/cryptofs/apps/usr/palm/applications/org.webosports.lunasysmgrce/files`
 
-rm -rf ${APPDIR}
-
 exit 0
