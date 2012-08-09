@@ -33,7 +33,10 @@ else
 	echo "we didn't find a passcode"
 fi
 
-echo "removing app dir"
-rm -rf ${APPDIR}
+TWEAKSDIR=/media/cryptofs/apps/usr/palm/services/org.webosinternals.tweaks.prefs/preferences/
+
+# Remove Tweaks .json files
+cd ${TWEAKSDIR}
+rm `ls /media/cryptofs/apps/usr/palm/applications/org.webosports.lunasysmgrce/files`
 
 exit 0
