@@ -18,7 +18,9 @@ file=var/palm/event.d/LunaSysMgr
 rm -f /$file
 cp ${APPDIR}/LunaSysMgr_eventd /etc/event.d/LunaSysMgr
 
-# Create copy of existing LunaSysMgr on installation.
+# Create copies of existing LunaSysMgr on installation.
+mkdir -p /media/internal/.someplacesafe
+cp /usr/bin/LunaSysMgr /media/internal/.someplacesafe/LunaSysMgr.bak
 mv -f /usr/bin/LunaSysMgr ${APPDIR}/LunaSysMgr.bak
 
 # Cleanup any files that might confuse the replacer script
