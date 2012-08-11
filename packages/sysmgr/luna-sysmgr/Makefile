@@ -82,11 +82,13 @@ build/$(CONFIG)/%.built-${VERSION}: build/$(CONFIG)/%-stage/.built-${VERSION} ${
 	tar -C build/$(CONFIG)/$*/usr/palm/applications/${APP_ID}/ -xf -
 	tar -cf - LunaSysMgr_eventd | \
 	tar -C build/$(CONFIG)/$*/usr/palm/applications/${APP_ID}/ -xf -
-	tar -cf - files/*.json | \
-	tar -C build/$(CONFIG)/$*/usr/palm/applications/${APP_ID}/ -xf -
 	mkdir -p build/$(CONFIG)/$*/usr/palm/applications/${APP_ID}/bin
 	tar -C build/$(CONFIG)/$*-stage/release-topaz/ -cf - LunaSysMgr | \
 	tar -C build/$(CONFIG)/$*/usr/palm/applications/${APP_ID}/bin/ -xf -
+	mkdir -p build/$(CONFIG)/$*/usr/palm/applications/$(APP_ID)/tweaks
+	for tj in `ls build/$(CONFIG)/src/conf/*.json| grep -v 'default-.*json'`; do \
+		cp $$tj build/$(CONFIG)/$*/usr/palm/applications/$(APP_ID)/tweaks ; \
+	done
 	echo "{" > build/$(CONFIG)/$*/usr/palm/applications/${APP_ID}/appinfo.json
 	echo "\"title\": \"${TITLE}\"," >> build/$(CONFIG)/$*/usr/palm/applications/${APP_ID}/appinfo.json
 	echo "\"id\": \"${APP_ID}\"," >> build/$(CONFIG)/$*/usr/palm/applications/${APP_ID}/appinfo.json
